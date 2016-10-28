@@ -1,0 +1,8 @@
+Jiayang Zhao
+Implementation of Matrix and TridiagMatrix Classes
+Implementation of Gaussian Elimination on Full Matrices and Tridiagonal Matrices
+
+To run the tests for the two solvers, run the command
+$ python main.py
+
+The file matrix.py contains implementations of a standard Matrix class and a TridiagMatrix class, as well as the factor and solve methods for each class.

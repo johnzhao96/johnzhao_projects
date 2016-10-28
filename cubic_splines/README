@@ -1,0 +1,9 @@
+Jiayang Zhao
+Implementation of Cubic Spline Approximations for Functions
+
+To run the tests for the splines, run the command
+$ python main.py
+
+The source code for the HermiteCubic class, as well as the smoothCubic_DEC and not_a_knot functions can be found in hermite.py. The matrix.py file is copied from my implementation of Matrices and Tridiagonal Matrices.
+
+For the tests on the sin function, the smoothCubic_DEC max error decreases by a factor of 16 when we double the number of partitioning intervals from 4 to 8. The not-a-knot max error decreases by a factor of about 19.

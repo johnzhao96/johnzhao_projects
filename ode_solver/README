@@ -1,0 +1,23 @@
+Jiayang Zhao
+Implementation of ODE Solver
+
+PROBLEM: Imagine we are standing at the equator and we want to drill a hole into the Earth such that if we drop a marble into the hole (which has width just slightly larger than the marble), then the marble will fall without touching the sides of the hole. What kind of curve does the path of the marble make?
+
+The code in this project approximates solutions to the differential equation:
+p’’ = -C * p,
+where p = (px,py), the location of the marble, and C is some constant. 
+
+The plots of the marble trajectories, energy, and time steps can be found in the plot_pngs directory.
+
+To run the solver, run the command:
+$ python main.py
+
+Running main.py solves for the trajectory of the marble, outputting trace information, such as the current position, time, and energy, to the file plots/marble_trace.txt. 
+
+Once trace logging information has been written to plots/marble_trace.txt, one can generate plots by running the command:
+$ gnuplot plot.gnu
+
+The solver uses two modules, numvec and solver. The numvec module provides an implementation of vectors in R^n, and the solver module implements Adam’s Method for approximating solutions to the ordinary differential equation 
+y’ = f(t,y).
+
+For my tolerance, I used 1e-2. To generate my plots, I simulated watching the marble for 10,000 seconds.
